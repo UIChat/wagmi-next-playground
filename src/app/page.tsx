@@ -143,6 +143,7 @@ function SwitchChain() {
         <button
           disabled={chainId === chain.id}
           key={chain.id}
+          //@ts-ignore
           onClick={() => switchChain({ chainId: chain.id })}
           type="button"
         >
@@ -377,7 +378,7 @@ function WriteContract() {
   )
 }
 
-export function Repro() {
+function Repro() {
   const chainId = useChainId()
 
   console.log('chainId from useChainId is', chainId)
